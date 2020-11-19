@@ -102,9 +102,9 @@ $(document).ready(function() {
   $(function(){
     jQuery(document).ready(function() {
     $('#home').backstretch([
-       "images/home-bg-slideshow1.jpg", 
-       "images/home-bg-slideshow2.jpg",
-       "images/home-bg-slideshow3.jpg",
+       "images/menus/normal.jpg", 
+       "images/menus/aka.jpg",
+       "images/menus/shirunashi.jpg",
         ],  {duration: 2000, fade: 750});
     });
   })
@@ -122,13 +122,13 @@ $(document).ready(function() {
   /* Parallax section
     -----------------------------------------------*/
   function initParallax() {
-    $('#about').parallax("100%", 0.1);
+    $('#access').parallax("100%", 0.1);
     $('#feature').parallax("100%", 0.3);
-    $('#about').parallax("100%", 0.1);
+    $('#access').parallax("100%", 0.1);
     $('#video').parallax("100%", 0.2);
     $('#menu').parallax("100%", 0.3);
     $('#team').parallax("100%", 0.3);
-    $('#gallery').parallax("100%", 0.1);
+    $('#menu').parallax("100%", 0.1);
     $('#contact').parallax("100%", 0.2);
   }
   initParallax();
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
   /* Nivo lightbox
     -----------------------------------------------*/
-  $('#gallery .col-md-4 a').nivoLightbox({
+  $('#menu .col-md-4 a').nivoLightbox({
         effect: 'fadeScale',
     });
 
