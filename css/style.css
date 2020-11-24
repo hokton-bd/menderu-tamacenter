@@ -726,6 +726,11 @@ footer strong {
 }
 
 
+.twitter-wrapper {
+  width: 50%;
+}
+
+
 
 /* Mobile Responsive */
 @media (max-width: 980px) {
@@ -762,6 +767,11 @@ footer strong {
 
   .navbar-default .navbar-brand {
     line-height: 46px;
+    font-size: 23px;
+  }
+
+  .twitter-wrapper {
+    width: 90%;
   }
 
 }
@@ -866,3 +876,23 @@ footer strong {
   .mx-auto {
     margin: 0 auto;
   }
+
+  .w-50 {
+    width: 50%;
+  }
+
+
+.video-wrapper video{
+
+  width: 100%;
+  height: 100%;
+
+}
+
+.px-2 {
+  padding: 0 2rem;
+}
+
+.slider-block {
+  padding: 0 16px;
+}
