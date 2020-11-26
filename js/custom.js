@@ -102,10 +102,11 @@ $(document).ready(function() {
   $(function(){
     jQuery(document).ready(function() {
     $('#home').backstretch([
-       "images/menus/normal.jpg", 
-       "images/menus/aka.jpg",
-       "images/menus/shirunashi.jpg",
-        ],  {duration: 2000, fade: 750});
+       "images/menus/top-aka.jpg", 
+       "images/menus/top-normal.jpg",
+       "images/menus/top-shirunashi.jpg",
+       "images/menus/top-tuke.jpg",
+        ],  {duration: 4000, fade: 750});
     });
   })
 
