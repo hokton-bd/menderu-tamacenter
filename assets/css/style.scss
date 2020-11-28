@@ -1,0 +1,316 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'wafu'; //好きな名前を設定します。
+    src: url('../shokakiutage.ttf') format('truetype');
+  }
+
+$wafu: 'wafu';
+   
+
+#top {
+    width: 100%;
+    padding: 0;
+
+    .carousel-item {
+        height: 100vh;
+        width: 100%;
+    
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    
+    }
+}
+
+
+.navbar {
+    background: black;
+
+    * {
+        color: yellow;
+        font-family: $wafu;
+    }
+
+}
+
+section {
+
+    padding: 120px 0;
+
+}
+
+.section-title {
+    font-size: 48px;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: center;
+    font-family: $wafu;
+
+
+    &::after {
+
+        display: block;
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 60px;
+        background: red;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30%;
+
+    }
+
+}
+
+.poster {
+
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+#menu {
+
+    .card {
+        cursor: pointer;
+
+        img {
+            transition: all .3s ease 0s;
+        }
+
+        &:hover {
+
+            // background: rgba(0, 0, 0, .7);
+            opacity: .7;
+
+            img {
+                transform: scale(1.3, 1.3);
+            }
+
+        }
+
+    }
+
+
+}
+
+.modal {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    display: none;
+    z-index: 999;
+
+    &__bg {
+
+        background: rgba(0, 0, 0, .7);
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+
+    }
+
+    &__content {
+
+        background: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+}
+
+.slider {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    display: none;
+
+
+    .prev {
+
+        left: 10%;
+
+        .fas {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+    .next {
+
+        right: 10%;
+        
+        .fas {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+    &__button {
+        color: white;
+        font-size: 48px;
+        position: absolute;
+        z-index: 1000;
+        cursor: pointer;
+        height: 80vh;
+        width: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s ease 0s;
+
+        &:hover {
+
+            background: rgba(0, 0, 0, .3);
+
+        }
+
+        .fas {
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+    }
+
+
+
+}
+
+.slider-active {
+    display: block;
+}
+
+.video-wrapper {
+
+    video {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+.takeout {
+
+    .title-icon {
+
+        left: 34%;
+
+    }
+
+}
+
+#social {
+    background: #d39e00;
+    z-index: 1;
+    margin-top: 60px;
+    height: 100vh;
+
+    .title-icon {
+        left: 30%;
+    }
+
+}
+
+.google-maps {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 36%;
+    position: relative;
+
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+
+.title-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon {
+
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.twitter {
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+.bg-black {
+
+    background: black;
+
+    * {
+        color: yellow;
+    }
+
+}
+
+@media only screen and (max-width: 426px) {
+
+    #top {
+        
+        .carousel-item {
+            
+            height: 50vh;
+            
+        }
+    }
+
+    .poster {
+
+        height: 80vh;
+        width: 100%;
+
+    }
+
+
+  }
