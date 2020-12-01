@@ -68,3 +68,19 @@ $(document).ready(function() {
     });
 
 });
+
+$(window).on('load resize', function(){
+    var winW = $(window).width();
+    var devW = 1024;
+    if (winW >= devW) {
+      
+        $('.twitter-timeline').attr('data-height', attr('1000'));
+
+    } else if(winW > 500) {
+
+        $('.twitter-timeline').attr('data-height', attr('400'));
+
+    }
+
+
+  });

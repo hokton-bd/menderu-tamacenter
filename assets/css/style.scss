@@ -10,22 +10,54 @@
   }
 
 $wafu: 'wafu';
+
+@mixin title-icon($section, $image, $left: 35%) {
+
+    #{$section} {
    
+        .section-title {
+
+            position: relative;
+            
+            &::before {
+
+                content: '';
+                position: absolute;
+                background-image: url(../images/#{$image});
+                background-repeat: no-repeat;
+                width: 80%;
+                height: 80%;
+                left: $left;
+                top: 50%;
+                transform: translateY(-50%);
+                
+            }
+            
+        }
+        
+    }
+}
+
+@include title-icon('#menu', 'menu.svg');
+@include title-icon('#takeout', 'noodles.svg', 27%);
+@include title-icon('#access', 'pedestrian-man.svg');
+@include title-icon('#shop-info', 'store.svg', 30%);
+@include title-icon('#social', 'twitter.svg', 10%);
 
 #top {
     width: 100%;
     padding: 0;
 
-    .carousel-item {
-        height: 100vh;
-        width: 100%;
+    // .carousel-item {
+    //     height: 100vh;
+    //     width: 100%;
     
-        img {
-            height: 100%;
-            width: 100%;
-        }
+    //     img {
+    //         height: 100%;
+    //         width: 100%;
+    //     }
     
-    }
+    // }
 }
 
 
@@ -35,7 +67,7 @@ $wafu: 'wafu';
     * {
         color: yellow;
         font-family: $wafu;
-        font-size: 32px;
+        font-size: 30px;
     }
 
 }
@@ -52,6 +84,8 @@ section {
     position: relative;
     text-align: center;
     font-family: $wafu;
+    background: #FFC106;
+    padding: 16px 0;
 
 
     &::after {
@@ -86,7 +120,7 @@ section {
 #menu {
 
     .card {
-        cursor: pointer;
+        border: 3px solid #FFC106;
 
         img {
             transition: all .3s ease 0s;
@@ -255,24 +289,6 @@ section {
 
 }
 
-.title-icon {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    left: 38%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.icon {
-
-    width: 100%;
-    height: 100%;
-    display: block;
-
-}
-
 .twitter {
 
     iframe {
@@ -292,23 +308,85 @@ section {
 
 }
 
+@media only screen and (max-width: 1025px) {
+    
+    .navbar {
+
+        * {
+
+            font-size: 24px;
+
+        }
+
+    }
+
+    .section-title {
+
+        font-size: 32px;
+
+    }
+
+    h5 {
+
+        font-size: 18px;
+
+    }
+
+    .card {
+
+        width: 50%;
+
+    }
+
+    h3 {
+
+        font-size: 20px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 769px) {
+
+    .navbar {
+
+        * {
+
+            font-size: 20px;
+
+        }
+
+    }
+
+    @include title-icon('#social', 'twitter.svg', 33%);
+
+}
+
 @media only screen and (max-width: 426px) {
 
-    #top {
-        
-        .carousel-item {
-            
-            height: 50vh;
-            
-        }
-    }
+    .navbar-toggler-icon {
 
-    .poster {
-
-        height: 80vh;
-        width: 100%;
+        background: transparent;
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        display: block;
+        font-weight: bold;
+        color: yellow;
 
     }
 
+    .section-title {
 
-  }
+        font-size: 24px;
+
+    }
+
+    @include title-icon('#menu', 'menu.svg', 10%);
+    @include title-icon('#takeout', 'noodles.svg', 10%);
+    @include title-icon('#access', 'pedestrian-man.svg', 10%);
+    @include title-icon('#shop-info', 'store.svg', 10%);
+    @include title-icon('#social', 'twitter.svg', 10%);
+
+
+}
