@@ -31,6 +31,7 @@
 .navbar * {
   color: yellow;
   font-family: "wafu";
+  font-size: 32px;
 }
 
 section {
@@ -76,12 +77,8 @@ section {
   transition: all .3s ease 0s;
 }
 
-#menu .card:hover {
-  opacity: .7;
-}
-
 #menu .card:hover img {
-  transform: scale(1.3, 1.3);
+  transform: scale(1.5, 1.5);
 }
 
 .modal {
