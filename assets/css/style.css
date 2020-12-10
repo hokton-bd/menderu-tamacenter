@@ -9,93 +9,45 @@
   src: url("../shokakiutage.ttf") format("truetype");
 }
 
-#menu .section-title {
+.section-title {
+  font-size: 48px;
+  position: relative;
+  text-align: center;
+  font-family: "wafu";
+}
+
+.section-title-block {
+  background: #FFC106;
+  padding: 16px 0;
+  margin-bottom: 80px;
+  width: 100%;
   position: relative;
 }
 
-#menu .section-title::before {
-  content: '';
+.section-title-block .title-icon {
+  width: 56px;
   position: absolute;
-  background-image: url(../images/menu.svg);
-  background-repeat: no-repeat;
-  width: 70%;
-  height: 70%;
-  left: 35%;
   top: 50%;
   transform: translateY(-50%);
-}
-
-#takeout .section-title {
-  position: relative;
-}
-
-#takeout .section-title::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/noodles.svg);
-  background-repeat: no-repeat;
-  width: 70%;
-  height: 70%;
-  left: 27%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#access .section-title {
-  position: relative;
-}
-
-#access .section-title::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/pedestrian-man.svg);
-  background-repeat: no-repeat;
-  width: 70%;
-  height: 70%;
-  left: 35%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#shop-info .section-title {
-  position: relative;
-}
-
-#shop-info .section-title::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/store.svg);
-  background-repeat: no-repeat;
-  width: 70%;
-  height: 70%;
-  left: 30%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#social .section-title {
-  position: relative;
-}
-
-#social .section-title::before {
-  content: '';
-  position: absolute;
-  background-image: url(../images/twitter.svg);
-  background-repeat: no-repeat;
-  width: 70%;
-  height: 70%;
   left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
+}
+
+.section-title-block .title-icon img {
+  width: 100%;
+  height: auto;
 }
 
 #top {
   width: 100%;
   padding: 0;
   max-height: 100vh;
+  margin: 0 auto;
+  background: black;
 }
 
 #top .carousel {
+  max-width: 1280px;
+  margin: 0 auto;
   width: 100%;
   max-height: 100vh;
 }
@@ -122,16 +74,6 @@
 
 section {
   padding: 120px 0;
-}
-
-.section-title {
-  font-size: 48px;
-  margin-bottom: 80px;
-  position: relative;
-  text-align: center;
-  font-family: "wafu";
-  background: #FFC106;
-  padding: 16px 0;
 }
 
 .poster {
@@ -242,10 +184,6 @@ section {
   height: 100%;
 }
 
-.takeout .title-icon {
-  left: 34%;
-}
-
 #social {
   background: #d39e00;
   z-index: 1;
@@ -253,14 +191,10 @@ section {
   height: 100vh;
 }
 
-#social .title-icon {
-  left: 30%;
-}
-
 .google-maps {
   height: 0;
   overflow: hidden;
-  padding-bottom: 36%;
+  padding-bottom: 56.25%;
   position: relative;
 }
 
@@ -285,6 +219,11 @@ section {
   color: yellow;
 }
 
+#social .section-title-block .title-icon {
+  width: 48px;
+  left: 2%;
+}
+
 @media only screen and (max-width: 1025px) {
   .navbar * {
     font-size: 24px;
@@ -301,25 +240,14 @@ section {
   h3 {
     font-size: 20px;
   }
+  #social .section-title-block .title-icon {
+    left: 3%;
+  }
 }
 
 @media only screen and (max-width: 769px) {
   .navbar * {
     font-size: 20px;
-  }
-  #social .section-title {
-    position: relative;
-  }
-  #social .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/twitter.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 33%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
@@ -332,81 +260,43 @@ section {
     font-weight: bold;
     color: yellow;
   }
+  .section-title-block {
+    padding: 12px 0;
+    margin-bottom: 40px;
+  }
+  .section-title-block .title-icon {
+    width: 48px;
+  }
   .section-title {
     font-size: 24px;
-  }
-  #menu .section-title {
-    position: relative;
-  }
-  #menu .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/menu.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #takeout .section-title {
-    position: relative;
-  }
-  #takeout .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/noodles.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #access .section-title {
-    position: relative;
-  }
-  #access .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/pedestrian-man.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #shop-info .section-title {
-    position: relative;
-  }
-  #shop-info .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/store.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #social .section-title {
-    position: relative;
-  }
-  #social .section-title::before {
-    content: '';
-    position: absolute;
-    background-image: url(../images/twitter.svg);
-    background-repeat: no-repeat;
-    width: 70%;
-    height: 70%;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
   }
   section {
     padding-top: 120px;
     padding-bottom: 0;
   }
+  .google-maps {
+    padding-bottom: 56.25%;
+  }
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 16px;
+}
+
+.carousel-caption__txt {
+  color: white;
+  font-weight: bold;
+}
+
+.carousel-item {
+  max-height: 477px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../images/right-arrow.svg);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../images/left-arrow.svg);
 }

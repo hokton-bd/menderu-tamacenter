@@ -11,46 +11,50 @@
 
 $wafu: 'wafu';
 
-@mixin title-icon($section, $image, $left: 35%) {
+.section-title {
+    font-size: 48px;    
+    position: relative;
+    text-align: center;
+    font-family: $wafu;
 
-    #{$section} {
-   
-        .section-title {
-
-            position: relative;
-            
-            &::before {
-
-                content: '';
-                position: absolute;
-                background-image: url(../images/#{$image});
-                background-repeat: no-repeat;
-                width: 70%;
-                height: 70%;
-                left: $left;
-                top: 50%;
-                transform: translateY(-50%);
-                
-            }
-            
-        }
-        
-    }
 }
 
-@include title-icon('#menu', 'menu.svg');
-@include title-icon('#takeout', 'noodles.svg', 27%);
-@include title-icon('#access', 'pedestrian-man.svg');
-@include title-icon('#shop-info', 'store.svg', 30%);
-@include title-icon('#social', 'twitter.svg', 10%);
+.section-title-block {
+    background: #FFC106;
+    padding: 16px 0;
+    margin-bottom: 80px;
+    width: 100%;
+    position: relative;
+
+    .title-icon {
+        width: 56px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+
+        img {
+
+            width: 100%;
+            height: auto;
+
+        }
+
+    }
+
+}
 
 #top {
     width: 100%;
     padding: 0;
     max-height: 100vh;
+    margin: 0 auto;
+    background: black;
 
     .carousel {
-
+        
+        max-width: 1280px;
+        margin: 0 auto;
         width: 100%;
         max-height: 100vh;
 
@@ -83,17 +87,6 @@ $wafu: 'wafu';
 section {
 
     padding: 120px 0;
-
-}
-
-.section-title {
-    font-size: 48px;
-    margin-bottom: 80px;
-    position: relative;
-    text-align: center;
-    font-family: $wafu;
-    background: #FFC106;
-    padding: 16px 0;
 
 }
 
@@ -238,32 +231,18 @@ section {
 
 }
 
-.takeout {
-
-    .title-icon {
-
-        left: 34%;
-
-    }
-
-}
-
 #social {
     background: #d39e00;
     z-index: 1;
     margin-top: 60px;
     height: 100vh;
 
-    .title-icon {
-        left: 30%;
-    }
-
 }
 
 .google-maps {
     height: 0;
     overflow: hidden;
-    padding-bottom: 36%;
+    padding-bottom: 56.25%;
     position: relative;
 
     iframe {
@@ -291,6 +270,21 @@ section {
 
     * {
         color: yellow;
+    }
+
+}
+
+#social {
+
+    .section-title-block {
+
+        .title-icon {
+
+            width: 48px;
+            left: 2%;
+
+        }
+
     }
 
 }
@@ -331,6 +325,19 @@ section {
 
     }
 
+    #social {
+
+        .section-title-block {
+            
+            .title-icon {
+                
+                left: 3%;
+                
+            }
+            
+        }
+    }
+
 
 }
 
@@ -346,7 +353,7 @@ section {
 
     }
 
-    @include title-icon('#social', 'twitter.svg', 33%);
+    // @include title-icon('#social', 'twitter.svg', 33%);
 
 }
 
@@ -363,17 +370,30 @@ section {
 
     }
 
+    .section-title-block {
+
+        padding: 12px 0;
+        margin-bottom: 40px;
+
+        .title-icon {
+
+            width: 48px;
+
+        }
+
+    }
+
     .section-title {
 
         font-size: 24px;
 
     }
 
-    @include title-icon('#menu', 'menu.svg', 10%);
-    @include title-icon('#takeout', 'noodles.svg', 10%);
-    @include title-icon('#access', 'pedestrian-man.svg', 10%);
-    @include title-icon('#shop-info', 'store.svg', 10%);
-    @include title-icon('#social', 'twitter.svg', 10%);
+    // @include title-icon('#menu', 'menu.svg', 10%);
+    // @include title-icon('#takeout', 'noodles.svg', 10%);
+    // @include title-icon('#access', 'pedestrian-man.svg', 10%);
+    // @include title-icon('#shop-info', 'store.svg', 10%);
+    // @include title-icon('#social', 'twitter.svg', 10%);
 
     section {
 
@@ -382,5 +402,45 @@ section {
 
     }
 
+    .google-maps {
+
+        padding-bottom: 56.25%;
+
+    }
+
+    
+
+
+}
+
+.carousel-caption {
+
+    background: rgba(0, 0, 0, .7);
+    padding: 0 16px;
+
+    &__txt {
+
+        color: white;
+        font-weight: bold;
+
+    }
+
+}
+
+.carousel-item {
+
+    max-height: 477px;
+
+}
+
+.carousel-control-next-icon {
+
+    background-image: url(../images/right-arrow.svg);
+
+}
+
+.carousel-control-prev-icon {
+
+    background-image: url(../images/left-arrow.svg);
 
 }

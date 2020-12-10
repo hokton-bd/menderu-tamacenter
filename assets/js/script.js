@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('a[href^="#"]').click(function(){
+    $('.nav-link').click(function(){
         var adjust = 0;
         var speed = 400;
         var href= $(this).attr("href");
